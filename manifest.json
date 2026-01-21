@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SSMU Fee Opt-Out Automator",
+  "version": "1.0.0",
+  "description": "Batch opt-out SSMU fees on Minerva",
+  "permissions": ["storage"],
+  "host_permissions": ["https://horizon.mcgill.ca/pban1/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://horizon.mcgill.ca/pban1/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
